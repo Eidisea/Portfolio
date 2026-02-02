@@ -124,8 +124,9 @@
             
             // If validation passes, show success message and redirect
             alert('Login successful! Welcome back!');
+            sessionStorage.setItem('authenticated', 'true');
             setTimeout(() => {
-                window.location.href = 'index.html';
+                window.location.href = 'index.html?auth=true';
             }, 1000);
         }
     </script>
